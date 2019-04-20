@@ -16,7 +16,7 @@ $('#window').on('mouseenter',function(e){
     window.clearInterval(timer)
 })
 $('#window').on('mouseleave',function(e){
-    setInterval(function(){
+    timer = setInterval(function(){
         makeLeave(getImage(n)).one('transitionend',function(e){
             makeEnter($(e.currentTarget))
         })
